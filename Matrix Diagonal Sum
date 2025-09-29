@@ -1,0 +1,72 @@
+class Solution {
+    public int diagonalSum(int[][] mat) {
+        int sum = 0;
+        int has = mat.length;
+        int ans = has/2;
+        for(int i=0; i<mat.length; i++){
+            
+            sum += mat[i][i];
+
+        }
+        for(int i=mat.length-1; i>=0; i--){
+           
+            sum += mat[i][(has-1)-i];
+            
+            
+        }
+        if(has%2 != 0){
+            sum -= mat[ans][ans];
+        }
+        return sum;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
